@@ -12,7 +12,7 @@ RUN cd /root && git clone git://git.kernel.org/pub/scm/linux/kernel/git/morgan/l
 
 RUN cd /root/libcap && make
 
-FROM scratch as fresh
+FROM scratch
 COPY --from=0 /root/libcap/progs/capsh /bin/
 COPY --from=0 /root/libcap/progs/getcap /bin/
 COPY --from=0 /root/libcap/progs/setcap /bin/
