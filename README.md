@@ -3,6 +3,8 @@ A simple docker container with static binaries for:
 - [getcap](http://man7.org/linux/man-pages/man8/getcap.8.html)
 - [setcap](http://man7.org/linux/man-pages/man8/setcap.8.html)
 
+Available on Docker Hub: https://hub.docker.com/r/scionproto/docker-caps
+
 This makes it easy to work with capabilities in docker containers. E.g. see the effect of docker's [--cap-add/--cap-drop](https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities) flags:
 ```
 $ docker run --rm -it --cap-add chown --cap-drop net_raw scionproto/docker-caps
