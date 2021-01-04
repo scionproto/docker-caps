@@ -25,7 +25,7 @@ More importantly, it makes it easy to set capabilities on binaries during docker
 ```
 FROM scionproto/docker-caps as caps
 
-FROM prom/blackbox_exporter
+FROM prom/blackbox-exporter
 COPY --from=caps /bin/setcap /bin
 RUN setcap cap_net_raw+ep /bin/blackbox_exporter && rm /bin/setcap
 ```
